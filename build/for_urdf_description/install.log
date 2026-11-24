@@ -19,6 +19,8 @@
 /home/simon/Dallbae/install/for_urdf_description/share/for_urdf_description/config/display.rviz
 /home/simon/Dallbae/install/for_urdf_description/share/for_urdf_description/config/slam_view.rviz
 /home/simon/Dallbae/install/for_urdf_description/share/for_urdf_description/world/slam_arena.world
+/home/simon/Dallbae/install/for_urdf_description/share/for_urdf_description/world/slam_arena_map.pgm
+/home/simon/Dallbae/install/for_urdf_description/share/for_urdf_description/world/slam_arena_map.yaml
 /home/simon/Dallbae/install/for_urdf_description/share/for_urdf_description/meshes/left_wheel_1.stl
 /home/simon/Dallbae/install/for_urdf_description/share/for_urdf_description/meshes/base_link.stl
 /home/simon/Dallbae/install/for_urdf_description/share/for_urdf_description/meshes/lidar_1.stl

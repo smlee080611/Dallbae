@@ -19,7 +19,7 @@ def generate_launch_description():
 
     default_world = os.path.join(pkg_share, 'world', 'slam_arena.world')
     xacro_file = os.path.join(pkg_share, 'urdf', 'robot.xacro')
-    default_map = os.path.expanduser('~/slam_arena_map.yaml')
+    default_map = os.path.join(pkg_share, 'world','slam_arena_map.yaml')
     default_nav2_params = os.path.join(pkg_share, 'config', 'nav2_params.yaml')
     rviz_config_file = os.path.join(pkg_share, 'config', 'nav2_default_view.rviz')
 

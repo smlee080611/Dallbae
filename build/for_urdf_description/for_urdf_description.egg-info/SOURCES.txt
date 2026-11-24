@@ -39,3 +39,5 @@ urdf/for_urdf.xacro
 urdf/materials.xacro
 urdf/robot.xacro
 world/slam_arena.world
+world/slam_arena_map.pgm
+world/slam_arena_map.yaml
