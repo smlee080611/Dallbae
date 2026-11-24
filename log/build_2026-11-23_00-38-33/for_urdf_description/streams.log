@@ -1,0 +1,21 @@
+[0.370s] Invoking command in '/home/simon/Dallbae/src/for_urdf_description': PYTHONPATH=/home/simon/Dallbae/build/for_urdf_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/simon/Dallbae/install/for_urdf_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/for_urdf_description build --build-base /home/simon/Dallbae/build/for_urdf_description/build install --record /home/simon/Dallbae/build/for_urdf_description/install.log --install-scripts $base/lib/fusion2urdf_ros2 --single-version-externally-managed install_data
+[0.504s] running egg_info
+[0.504s] writing ../../build/for_urdf_description/for_urdf_description.egg-info/PKG-INFO
+[0.504s] writing dependency_links to ../../build/for_urdf_description/for_urdf_description.egg-info/dependency_links.txt
+[0.504s] writing entry points to ../../build/for_urdf_description/for_urdf_description.egg-info/entry_points.txt
+[0.504s] writing requirements to ../../build/for_urdf_description/for_urdf_description.egg-info/requires.txt
+[0.504s] writing top-level names to ../../build/for_urdf_description/for_urdf_description.egg-info/top_level.txt
+[0.505s] reading manifest file '../../build/for_urdf_description/for_urdf_description.egg-info/SOURCES.txt'
+[0.506s] writing manifest file '../../build/for_urdf_description/for_urdf_description.egg-info/SOURCES.txt'
+[0.506s] running build
+[0.506s] running build_py
+[0.506s] running install
+[0.506s] running install_lib
+[0.507s] running install_data
+[0.507s] copying launch/gazebo.launch.py -> /home/simon/Dallbae/install/for_urdf_description/share/for_urdf_description/launch
+[0.507s] running install_egg_info
+[0.508s] removing '/home/simon/Dallbae/install/for_urdf_description/lib/python3.10/site-packages/for_urdf_description-0.0.0-py3.10.egg-info' (and everything under it)
+[0.508s] Copying ../../build/for_urdf_description/for_urdf_description.egg-info to /home/simon/Dallbae/install/for_urdf_description/lib/python3.10/site-packages/for_urdf_description-0.0.0-py3.10.egg-info
+[0.509s] running install_scripts
+[0.521s] writing list of installed files to '/home/simon/Dallbae/build/for_urdf_description/install.log'
+[0.541s] Invoked command in '/home/simon/Dallbae/src/for_urdf_description' returned '0': PYTHONPATH=/home/simon/Dallbae/build/for_urdf_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/simon/Dallbae/install/for_urdf_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/for_urdf_description build --build-base /home/simon/Dallbae/build/for_urdf_description/build install --record /home/simon/Dallbae/build/for_urdf_description/install.log --install-scripts $base/lib/fusion2urdf_ros2 --single-version-externally-managed install_data

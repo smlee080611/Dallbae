@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<robot name="for_urdf" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find for_urdf_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find for_urdf_description)/urdf/for_urdf.trans" />
+<xacro:include filename="$(find for_urdf_description)/urdf/for_urdf.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.06769178423240989 0.005000000000000009 0.14205521466517226" rpy="0 0 0"/>
+    <mass value="3.5"/>
+    <inertia ixx="0.041547" iyy="0.040825" izz="0.052671" ixy="0.0" iyz="0.0" ixz="-0.001062"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find for_urdf_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find for_urdf_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_wheel_1">
+  <inertial>
+    <origin xyz="-7.237528875152536e-18 0.009999999999999981 -1.447505775030507e-17" rpy="0 0 0"/>
+    <mass value="0.5"/>
+    <inertia ixx="0.000329" iyy="0.000624" izz="0.000329" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.165 -0.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find for_urdf_description)/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.165 -0.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find for_urdf_description)/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_wheel_1">
+  <inertial>
+    <origin xyz="-7.237528875152536e-18 -0.010000000000000009 -1.447505775030507e-17" rpy="0 0 0"/>
+    <mass value="0.5"/>
+    <inertia ixx="0.000329" iyy="0.000624" izz="0.000329" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 0.155 -0.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find for_urdf_description)/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 0.155 -0.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find for_urdf_description)/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_1">
+  <inertial>
+    <origin xyz="0.07999999999999999 5.204170427930421e-18 0.020000000000000018" rpy="0 0 0"/>
+    <mass value="0.1"/>
+    <inertia ixx="0.000076" iyy="0.000076" izz="0.000125" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.07 -0.005 -0.25" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find for_urdf_description)/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.07 -0.005 -0.25" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find for_urdf_description)/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="left_wheel_joint" type="continuous">
+  <origin xyz="0.0 0.165 0.0" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="left_wheel_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="right_wheel_joint" type="continuous">
+  <origin xyz="0.0 -0.155 0.0" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="right_wheel_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="lidar_rigid" type="fixed">
+  <origin xyz="0.07 0.005 0.26" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="lidar_1"/>
+</joint>
+
+</robot>

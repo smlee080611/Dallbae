@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="slam_arena">
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- 외벽 (예: 8m x 8m 영역) -->
+    <model name="wall_north">
+      <static>true</static>
+      <pose>0 4 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>8.2 0.2 1.0</size></box></geometry></collision>
+        <visual name="visual"><geometry><box><size>8.2 0.2 1.0</size></box></geometry></visual>
+      </link>
+    </model>
+    <model name="wall_south">
+      <static>true</static>
+      <pose>0 -4 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>8.2 0.2 1.0</size></box></geometry></collision>
+        <visual name="visual"><geometry><box><size>8.2 0.2 1.0</size></box></geometry></visual>
+      </link>
+    </model>
+    <model name="wall_east">
+      <static>true</static>
+      <pose>4 0 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>0.2 8.0 1.0</size></box></geometry></collision>
+        <visual name="visual"><geometry><box><size>0.2 8.0 1.0</size></box></geometry></visual>
+      </link>
+    </model>
+    <model name="wall_west">
+      <static>true</static>
+      <pose>-4 0 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>0.2 8.0 1.0</size></box></geometry></collision>
+        <visual name="visual"><geometry><box><size>0.2 8.0 1.0</size></box></geometry></visual>
+      </link>
+    </model>
+
+    <!-- 내부 장애물: 사각 기둥 및 원형 기둥 -->
+    <model name="pillar_box_1">
+      <static>true</static>
+      <pose>-1.5 1.5 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>0.8 0.8 1.0</size></box></geometry></collision>
+        <visual name="visual"><geometry><box><size>0.8 0.8 1.0</size></box></geometry></visual>
+      </link>
+    </model>
+    <model name="pillar_box_2">
+      <static>true</static>
+      <pose>1.8 -1.2 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>0.9 0.6 1.0</size></box></geometry></collision>
+        <visual name="visual"><geometry><box><size>0.9 0.6 1.0</size></box></geometry></visual>
+      </link>
+    </model>
+    <model name="pillar_cyl_1">
+      <static>true</static>
+      <pose>1.2 1.8 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><cylinder><radius>0.45</radius><length>1.0</length></cylinder></geometry></collision>
+        <visual name="visual"><geometry><cylinder><radius>0.45</radius><length>1.0</length></cylinder></geometry></visual>
+      </link>
+    </model>
+  </world>
+</sdf>
