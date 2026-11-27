@@ -207,7 +207,7 @@ hardware_interface::return_type StmVelHardwareInterface::read(
   const rclcpp::Time & /*time*/, const rclcpp::Duration & /*period*/)
 {
   // 피드백 미수신 구성이므로 상태값 유지
-  return hardware_interface::return_type::SUCCESS;
+  return hardware_interface::return_type::OK;
 }
 
 hardware_interface::return_type StmVelHardwareInterface::write(
@@ -225,7 +225,7 @@ hardware_interface::return_type StmVelHardwareInterface::write(
     static_cast<int>(std::llround(raw_right_rpm)), -max_rpm_, max_rpm_);
 
   send_vel_rpm_cmd(left_rpm, right_rpm);
-  return hardware_interface::return_type::SUCCESS;
+  return hardware_interface::return_type::OK;
 }
 
 }  // namespace dallbae_teleop
