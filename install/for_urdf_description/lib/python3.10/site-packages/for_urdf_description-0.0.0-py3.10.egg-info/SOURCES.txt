@@ -11,6 +11,7 @@ setup.py
 config/controller.yaml
 config/display.rviz
 config/gazebo.rviz
+config/nav2.rviz
 config/nav2_params.yaml
 config/ros_gz_bridge_gazebo.yaml
 config/slam_online_async.yaml
