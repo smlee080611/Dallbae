@@ -285,24 +285,5 @@
       </plugin>
     </sensor>
   </gazebo>
-  <ros2_control name="DallbaeTeleopSystem" type="system">
-    <hardware>
-      <plugin>dallbae_teleop/StmVelHardwareInterface</plugin>
-      <param name="port">/dev/ttyACM0</param>
-      <param name="baudrate">115200</param>
-      <param name="rpm_scale">1.0</param>
-      <param name="max_rpm">12</param>
-    </hardware>
-    <joint name="left_wheel_joint">
-      <command_interface name="velocity"/>
-      <state_interface name="position"/>
-      <state_interface name="velocity"/>
-    </joint>
-    <joint name="right_wheel_joint">
-      <command_interface name="velocity"/>
-      <state_interface name="position"/>
-      <state_interface name="velocity"/>
-    </joint>
-  </ros2_control>
 
 </robot>

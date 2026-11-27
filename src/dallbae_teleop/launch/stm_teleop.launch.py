@@ -77,7 +77,7 @@ def generate_launch_description():
       ),
       DeclareLaunchArgument(
           "urdf_file",
-          default_value="urdf/robot.xacro",
+          default_value="urdf/robot_copy.xacro",
           description="Relative path to Xacro/URDF inside urdf_pkg",
       ),
       DeclareLaunchArgument(
