@@ -1,0 +1,10 @@
+<library path="dallbae_teleop">
+  <class
+    name="dallbae_teleop/StmVelHardwareInterface"
+    type="dallbae_teleop::StmVelHardwareInterface"
+    base_class_type="hardware_interface::SystemInterface">
+    <description>
+      Send left and right wheel velocity commands from diff_drive_controller to STM32 over serial.
+    </description>
+  </class>
+</library>

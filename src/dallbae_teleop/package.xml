@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>dallbae_teleop</name>
+  <version>0.1.0</version>
+  <description>ros2_control diff_drive serial velocity transmitter to STM32 for teleop</description>
+  <maintainer email="simon@todo.todo">simon</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>hardware_interface</depend>
+  <depend>pluginlib</depend>
+  <depend>rclcpp_lifecycle</depend>
+  <depend>controller_manager</depend>
+  <depend>diff_drive_controller</depend>
+  <depend>joint_state_broadcaster</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
