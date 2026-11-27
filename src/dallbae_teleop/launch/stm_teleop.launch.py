@@ -29,14 +29,14 @@ def _setup_nodes(context):
       package="robot_state_publisher",
       executable="robot_state_publisher",
       output="screen",
-      parameters=[robot_description],
+      parameters=[robot_description,{"use_sim_time": False}],
   )
 
   control_node = Node(
       package="controller_manager",
       executable="ros2_control_node",
       output="screen",
-      parameters=[robot_description, controllers_path],
+      parameters=[robot_description, controllers_path,{"use_sim_time": False}],
   )
 
   joint_state_broadcaster_spawner = Node(
